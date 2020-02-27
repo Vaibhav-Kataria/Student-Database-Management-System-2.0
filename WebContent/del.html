@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black">
+<center>
+	<h1 style="text-align:center; color:white;">Student Data Flush Interface</h1>
+	<h2 style="text-align:center; color:red;">Enter Details correctly. Recommend you to see the Database before proceeding and crosscheck.</h2>
+		<a href="index.html"><input class="button" type="button" value="Go Home"/></a>
+	
+			<form method="post" action="OutputJDBCServlet">
+					<input name="viw" class="button" type="submit" value="View Entire Database"/>
+			</form>
+<br/><br/><br/>
+			<form method="get" action="DeleteJDBCServlet">
+				<select name="filter">
+					<option value="Roll">Roll No.</option>
+					<option value="Name">Name</option>
+					<option value="Course">Course</option>
+					<option value="age">Age</option>
+				</select>
+				<input type="text" name="filterValue"/>
+				<input type="submit" >
+			</form>
+</center>
+</body>
+</html>

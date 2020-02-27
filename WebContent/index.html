@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>.button {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 15px;
+  color: #FFFFFF;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}</style>
+<script>
+function alertUser()
+{
+	alert("You are doing a foolish thing);
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Student Database Management</title>
+</head>
+<body bgcolor="black"><br/><br/>
+<center>
+<h1 style="color:white; text-align:center;">Welcome to Student Database Management Interface</h1>
+<br/><br/>
+<table style="background-color:grey;"><tr>
+	<td><a href="add.html"><input name="Add" class="button" type="button" value="Add a Student"   /></a></td>
+	<td><a href="del.html"><input name="Del" class="button" type="button" value="Remove a Student"/></a></td>
+	<td><a href="mod.html"><input name="Mod" class="button" type="button" value="Modify a Student"/></a></td>
+	<td><form method="post" action="OutputJDBCServlet">
+		<input name="viw" class="button" type="submit" value="View Entire Database"/>
+	</form></td>
+	<td><form name="searchBox" method="get" action="SearchJDBCServlet">
+		<p style="align:right; text-align:right;">
+		<input name="search" type="text" placeholder="Enter Roll Number"/>
+		<input type="submit" value="Search" >
+		</p>
+		</form></td>
+	<td><form method="post" action="CookieDestroyer">
+		<p style="align:right; text-align:right;">
+		<input type="submit" value="Logout" >
+		</p>
+		</form></td>
+	</tr></table>
+	<br/><br/>
+	<div style="color:white; ">
+		<table style="text-align:center;">
+			<tr>
+				<span style="text-align:center;border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  ">Use the Above Menu to interact with the Database.</span>
+			</tr>
+		</table>
+	</div></center>
+</body>
+</html>
